@@ -15,9 +15,7 @@ class MoneyWidget extends ConsumerWidget {
     final response = ref.watch(textModelProvider("blog-ds"));
     return response.when(data: (d){
       final json = jsonDecode(d);
-      return Container(
-        child: Markdown(data: json['context'],shrinkWrap: true,),
-      );
+      return Markdown(data: json['context'],shrinkWrap: true,);
     }, error: (e,s){
       return Text('出错了:$e');
     }, loading: ()=>const CupertinoActivityIndicator());

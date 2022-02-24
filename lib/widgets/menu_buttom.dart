@@ -1,3 +1,4 @@
+import 'package:dd_blog_macos/component/login.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:macos_ui/macos_ui.dart';
 
@@ -11,7 +12,12 @@ class MenuBottom extends StatelessWidget {
       child: MacosListTile(
         leading: const MacosIcon(CupertinoIcons.profile_circled),
         title: const Text('未登录'),
-        subtitle: Text('梁典典的博客'),
+        subtitle: const Text('梁典典的博客'),
+        onClick: (){
+          showMacosSheet(context: context, builder: (BuildContext context) {
+            return const LoginComponent();
+          }, );
+        },
       ),
     );
   }

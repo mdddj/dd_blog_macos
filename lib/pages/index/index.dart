@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:macos_ui/macos_ui.dart';
 
+import '../../widgets/money.dart';
+
 
 class IndexPage extends StatefulWidget {
   const IndexPage({Key? key}) : super(key: key);
@@ -20,11 +22,11 @@ class _IndexPageState extends State<IndexPage> {
             return Container();
           },itemCount: 1,);
         },),
-        ResizablePane(minWidth: 200,startWidth: 200, resizableSide: ResizableSide.left, builder: (BuildContext context, ScrollController scrollController) {
+        ResizablePane(minWidth: 200,startWidth: 200, windowBreakpoint: 400, resizableSide: ResizableSide.left, builder: (BuildContext context, ScrollController scrollController) {
           return SingleChildScrollView(
             child: Column(
               children: [
-                  Text('打赏')
+                MoneyWidget()
               ],
             ),
           );

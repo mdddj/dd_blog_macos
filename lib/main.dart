@@ -1,11 +1,12 @@
-import 'package:dataoke_sdk/dd_taoke_sdk.dart';
 import 'package:dataoke_sdk/network/util.dart';
 import 'package:dd_blog_macos/pages/home.dart';
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/adapters.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:macos_ui/macos_ui.dart';
 
-void main() {
+void main() async {
+  await Hive.initFlutter();
   DdTaokeUtil().init('https://itbug.shop', '443');
   runApp(const ProviderScope(child: MyApp()));
 }

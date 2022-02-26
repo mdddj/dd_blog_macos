@@ -38,6 +38,9 @@ dependencies:
   flutter_hooks: ^0.18.0
   hooks_riverpod: ^1.0.3
   flutter_markdown: ^0.6.9
+  hive_flutter: any
+
+  hive: ^2.0.6
   macos_ui:
     path: ../../../ldd/macos_ui
   dataoke_sdk:

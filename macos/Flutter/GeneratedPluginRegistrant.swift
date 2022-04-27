@@ -5,10 +5,14 @@
 import FlutterMacOS
 import Foundation
 
-import native_context_menu
+import dd_check_plugin
+import network_info_plus_macos
+import package_info
 import path_provider_macos
 
 func RegisterGeneratedPlugins(registry: FlutterPluginRegistry) {
-  NativeContextMenuPlugin.register(with: registry.registrar(forPlugin: "NativeContextMenuPlugin"))
+  DdCheckPlugin.register(with: registry.registrar(forPlugin: "DdCheckPlugin"))
+  NetworkInfoPlusPlugin.register(with: registry.registrar(forPlugin: "NetworkInfoPlusPlugin"))
+  FLTPackageInfoPlugin.register(with: registry.registrar(forPlugin: "FLTPackageInfoPlugin"))
   PathProviderPlugin.register(with: registry.registrar(forPlugin: "PathProviderPlugin"))
 }
